@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<sdf version="1.8">
+  <world name="custom_world">
+    <plugin filename="ignition-gazebo-physics-system" name="ignition::gazebo::systems::Physics"/>
+    <plugin filename="ignition-gazebo-user-commands-system" name="ignition::gazebo::systems::UserCommands"/>
+    <plugin filename="ignition-gazebo-scene-broadcaster-system" name="ignition::gazebo::systems::SceneBroadcaster"/>
+    
+    <light type="directional" name="sun"><pose>0 0 10 0 0 0</pose><cast_shadows>true</cast_shadows></light>
+    
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision"><geometry><plane><normal>0 0 1</normal><size>100 100</size></plane></geometry></collision>
+        <visual name="visual"><geometry><plane><normal>0 0 1</normal><size>100 100</size></plane></geometry><material><ambient>0 0 0 1</ambient></material></visual>
+      </link>
+    </model>
+
+    <model name="generated_walls">
+      <static>true</static>
+      
+    <link name='wall_0'>
+      <pose>2.6250 7.4250 1.2500 0 0 -3.1391</pose>
+      <collision name='collision'><geometry><box><size>20.0501 0.2 2.5</size></box></geometry></collision>
+      <visual name='visual'>
+        <geometry><box><size>20.0501 0.2 2.5</size></box></geometry>
+        <material><ambient>0.8 0.8 0.8 1</ambient><diffuse>0.8 0.8 0.8 1</diffuse></material>
+      </visual>
+    </link>
+    <link name='wall_1'>
+      <pose>-7.3750 -0.0250 1.2500 0 0 -1.5674</pose>
+      <collision name='collision'><geometry><box><size>14.8501 0.2 2.5</size></box></geometry></collision>
+      <visual name='visual'>
+        <geometry><box><size>14.8501 0.2 2.5</size></box></geometry>
+        <material><ambient>0.8 0.8 0.8 1</ambient><diffuse>0.8 0.8 0.8 1</diffuse></material>
+      </visual>
+    </link>
+    <link name='wall_2'>
+      <pose>2.5750 -7.4500 1.2500 0 0 0.0000</pose>
+      <collision name='collision'><geometry><box><size>19.8500 0.2 2.5</size></box></geometry></collision>
+      <visual name='visual'>
+        <geometry><box><size>19.8500 0.2 2.5</size></box></geometry>
+        <material><ambient>0.8 0.8 0.8 1</ambient><diffuse>0.8 0.8 0.8 1</diffuse></material>
+      </visual>
+    </link>
+    <link name='wall_3'>
+      <pose>12.4750 -0.0500 1.2500 0 0 1.5742</pose>
+      <collision name='collision'><geometry><box><size>14.8001 0.2 2.5</size></box></geometry></collision>
+      <visual name='visual'>
+        <geometry><box><size>14.8001 0.2 2.5</size></box></geometry>
+        <material><ambient>0.8 0.8 0.8 1</ambient><diffuse>0.8 0.8 0.8 1</diffuse></material>
+      </visual>
+    </link>
+    </model>
+    
+  </world>
+</sdf>
