@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+<sdf version="1.8">
+  <world name="custom_world">
+    <plugin filename="ignition-gazebo-physics-system" name="ignition::gazebo::systems::Physics"/>
+    <plugin filename="ignition-gazebo-user-commands-system" name="ignition::gazebo::systems::UserCommands"/>
+    <plugin filename="ignition-gazebo-scene-broadcaster-system" name="ignition::gazebo::systems::SceneBroadcaster"/>
+    
+    <light type="directional" name="sun"><pose>0 0 10 0 0 0</pose><cast_shadows>true</cast_shadows></light>
+    
+    <model name="ground_plane">
+      <static>true</static>
+      <pose>0.6000 -0.2000 -0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>25.6 24.0 1.0</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>25.6 24.0 1.0</size></box></geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.5 0.5 0.5 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="generated_walls">
+      <static>true</static>
+      
+    <link name='wall_0'>
+      <pose>2.5355 0.3604 0.2500 0 0 -0.2618</pose>
+      <collision name='collision'><geometry><box><size>7.0595 0.2 0.5</size></box></geometry></collision>
+      <visual name='visual'>
+        <geometry><box><size>7.0595 0.2 0.5</size></box></geometry>
+        <material><ambient>0.8 0.8 0.8 1</ambient><diffuse>0.8 0.8 0.8 1</diffuse></material>
+      </visual>
+    </link>
+    <link name='wall_1'>
+      <pose>4.8628 -4.6821 0.2500 0 0 1.3145</pose>
+      <collision name='collision'><geometry><box><size>8.5367 0.2 0.5</size></box></geometry></collision>
+      <visual name='visual'>
+        <geometry><box><size>8.5367 0.2 0.5</size></box></geometry>
+        <material><ambient>0.8 0.8 0.8 1</ambient><diffuse>0.8 0.8 0.8 1</diffuse></material>
+      </visual>
+    </link>
+    <link name='wall_2'>
+      <pose>0.4048 -7.9064 0.2500 0 0 2.8798</pose>
+      <collision name='collision'><geometry><box><size>6.9898 0.2 0.5</size></box></geometry></collision>
+      <visual name='visual'>
+        <geometry><box><size>6.9898 0.2 0.5</size></box></geometry>
+        <material><ambient>0.8 0.8 0.8 1</ambient><diffuse>0.8 0.8 0.8 1</diffuse></material>
+      </visual>
+    </link>
+    <link name='wall_3'>
+      <pose>-1.8523 -2.8827 0.2500 0 0 1.3056</pose>
+      <collision name='collision'><geometry><box><size>8.5366 0.2 0.5</size></box></geometry></collision>
+      <visual name='visual'>
+        <geometry><box><size>8.5366 0.2 0.5</size></box></geometry>
+        <material><ambient>0.8 0.8 0.8 1</ambient><diffuse>0.8 0.8 0.8 1</diffuse></material>
+      </visual>
+    </link>
+    <link name='wall_4'>
+      <pose>2.3821 -5.0737 0.2500 0 0 -2.6180</pose>
+      <collision name='collision'><geometry><box><size>0.7215 0.2 0.5</size></box></geometry></collision>
+      <visual name='visual'>
+        <geometry><box><size>0.7215 0.2 0.5</size></box></geometry>
+        <material><ambient>0.8 0.8 0.8 1</ambient><diffuse>0.8 0.8 0.8 1</diffuse></material>
+      </visual>
+    </link>
+    <link name='wall_5'>
+      <pose>4.8958 -3.2498 0.2500 0 0 3.1416</pose>
+      <collision name='collision'><geometry><box><size>0.6848 0.2 0.5</size></box></geometry></collision>
+      <visual name='visual'>
+        <geometry><box><size>0.6848 0.2 0.5</size></box></geometry>
+        <material><ambient>0.8 0.8 0.8 1</ambient><diffuse>0.8 0.8 0.8 1</diffuse></material>
+      </visual>
+    </link>
+    <link name='wall_6'>
+      <pose>-1.9579 -5.8502 0.2500 0 0 -0.2618</pose>
+      <collision name='collision'><geometry><box><size>1.3518 0.2 0.5</size></box></geometry></collision>
+      <visual name='visual'>
+        <geometry><box><size>1.3518 0.2 0.5</size></box></geometry>
+        <material><ambient>0.8 0.8 0.8 1</ambient><diffuse>0.8 0.8 0.8 1</diffuse></material>
+      </visual>
+    </link>
+    <link name='wall_7'>
+      <pose>0.0088 -7.2505 0.2500 0 0 1.1813</pose>
+      <collision name='collision'><geometry><box><size>1.0708 0.2 0.5</size></box></geometry></collision>
+      <visual name='visual'>
+        <geometry><box><size>1.0708 0.2 0.5</size></box></geometry>
+        <material><ambient>0.8 0.8 0.8 1</ambient><diffuse>0.8 0.8 0.8 1</diffuse></material>
+      </visual>
+    </link>
+    <link name='wall_8'>
+      <pose>0.6194 -6.9297 0.2500 0 0 -0.4049</pose>
+      <collision name='collision'><geometry><box><size>0.8862 0.2 0.5</size></box></geometry></collision>
+      <visual name='visual'>
+        <geometry><box><size>0.8862 0.2 0.5</size></box></geometry>
+        <material><ambient>0.8 0.8 0.8 1</ambient><diffuse>0.8 0.8 0.8 1</diffuse></material>
+      </visual>
+    </link>
+    <link name='wall_9'>
+      <pose>0.9302 -7.5628 0.2500 0 0 -1.7782</pose>
+      <collision name='collision'><geometry><box><size>0.9371 0.2 0.5</size></box></geometry></collision>
+      <visual name='visual'>
+        <geometry><box><size>0.9371 0.2 0.5</size></box></geometry>
+        <material><ambient>0.8 0.8 0.8 1</ambient><diffuse>0.8 0.8 0.8 1</diffuse></material>
+      </visual>
+    </link>
+    </model>
+    
+  </world>
+</sdf>
